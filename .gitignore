@@ -18,6 +18,7 @@ __pycache__
 
 #Databases
 instance/
+*-database.db
 
 # Editor directories and files
 .vscode/*

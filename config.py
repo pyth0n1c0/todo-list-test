@@ -3,10 +3,10 @@ import os
 ROOT_URI = os.path.dirname(os.path.abspath(__name__))
 
 class DevelopmentConfig:
-	SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URI', 'sqlite://' + os.path.join(ROOT_URI, 'dev-databse.db'))
+	SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URI', 'sqlite:///' + os.path.join(ROOT_URI, 'dev-database.db'))
 
 class TestingConfig:
-	SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URI', 'sqlite://' + os.path.join(ROOT_URI, 'test-databse.db'))
+	SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URI', 'sqlite:///' + os.path.join(ROOT_URI, 'test-database.db'))
 	TESTING = True
 
 class ProductionConfig:
