@@ -11,6 +11,9 @@ def create_app(config_name):
 	app = Flask(__name__)
 	app.config.from_object(config[config_name])
 
+	from .api import api
+	api.configure(app)
+
 	CORS(app)
 	db.init_app(app)
 	ma.init_app(app)
